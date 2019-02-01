@@ -3,10 +3,8 @@ class CreateDogs < ActiveRecord::Migration[5.2]
     create_table :dogs do |t|
       t.string :name
       t.string :breed
-      t.belongs_to :dogsitter, index: true
       t.belongs_to :city, index: true
-      t.belongs_to :stroll, index: true
-
+      
       t.timestamps
     end
   end
